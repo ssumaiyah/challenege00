@@ -10,12 +10,12 @@ pst_amount = sub_total * PST_RATE
 
 grand_total = sub_total + gst_amount + pst_amount
 
-puts "Subtotal: $#{sub_total }"
+puts "Subtotal: $#{sub_total}"
 puts "PST: $#{ '%.2f' %pst_amount} - 7%"
-puts "GST: $#{gst_amount} - 5%"
+puts "GST: $#{ '%.2f' %gst_amount} - 5%"
 puts "Grand Total: $#{grand_total}"
 if(grand_total <= 5.00)
-    puts "Pocket Change!"
+    puts
 end
 if(grand_total > 5.00 && grand_total < 20)
     puts "Wallet time!"
@@ -23,3 +23,5 @@ end
 if(grand_total >= 20)
     puts "Charge It!"
 end
+
+ "Pocket Change!"
